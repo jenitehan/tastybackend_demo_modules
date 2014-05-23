@@ -6,6 +6,12 @@
 function tastybackend_demo_blocks_block_info() {
   $blocks['tastybackend_demo_blocks_login'] = array(
     'info' => t('Tasty Backend Demo Login Info'),
+    'weight' => -9,
+    'status' => 1,
+    'region' => 'sidebar_first',
+  );
+  $blocks['tastybackend_demo_blocks_profile'] = array(
+    'info' => t('Tasty Backend Demo Profile Info'),
     'weight' => -10,
     'status' => 1,
     'region' => 'sidebar_first',
@@ -25,6 +31,12 @@ function tastybackend_demo_blocks_block_view($delta = '') {
     $content = '<p>To log in and experience the Tasty Backend firsthand, use the account info below:</p>';
     $content .= '<p>U: demo<br>P: demo</p>';
     $block['subject'] = t('Login Info');
+    $block['content'] = $content;
+  }
+  if ($delta == 'tastybackend_demo_blocks_profile') {
+    $content = '<p>The Tasty Backend Standard installation profile is currently in development, but you can <a href="https://github.com/jenitehan/tastybackend_standard">grab it on GitHub</a>.</p>';
+    //$content .= '<p>U: demo<br>P: demo</p>';
+    $block['subject'] = t('Get the Profile');
     $block['content'] = $content;
   }
   

@@ -10,7 +10,7 @@ function tastybackend_contact_install() {
   node_object_prepare($node);
   $node->title = 'Contact';
   $node->language = 'en';
-  $node->body[LANGUAGE_NONE][0]['value']   = '';
+  $node->body[LANGUAGE_NONE][0]['value']   = 'Have any feedback on the Tasty Backend? Have a question? Let me know!';
   $node->body[LANGUAGE_NONE][0]['format']  = 'full_html';
   $node->uid = 1;
   $node->promote = 0;

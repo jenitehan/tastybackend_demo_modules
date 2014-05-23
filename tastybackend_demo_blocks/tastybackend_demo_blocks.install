@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function tastybackend_demo_blocks_install() {
+  $query = db_insert('block_role')
+  ->fields(array(
+    'module' => 'tastybackend_demo_blocks',
+    'delta' => 'tastybackend_demo_blocks_login',
+    'rid' => 1,
+  ))
+  ->execute();
+}

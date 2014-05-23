@@ -1,0 +1,5 @@
+name = Tasty Backend Demo Blocks
+description = Demonstration blocks for the Tasty Backend demo site.
+package = Tasty Backend Demo
+version = 7.x-1.0
+core = 7.x

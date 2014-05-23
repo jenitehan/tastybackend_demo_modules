@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function tastybackend_demo_blocks_block_info() {
+  $blocks['tastybackend_demo_blocks_login'] = array(
+    'info' => t('Tasty Backend Demo Login Info'),
+    'weight' => -10,
+    'status' => 1,
+    'region' => 'sidebar_first',
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function tastybackend_demo_blocks_block_view($delta = '') {
+  
+  $block = array();
+  
+  if ($delta == 'tastybackend_demo_blocks_login') {
+    $content = '<p>To log in and experience the Tasty Backend firsthand, use the account info below:</p>';
+    $content .= '<p>U: demo<br>P: demo</p>';
+    $block['subject'] = t('Login Info');
+    $block['content'] = $content;
+  }
+  
+  return $block;
+  
+}

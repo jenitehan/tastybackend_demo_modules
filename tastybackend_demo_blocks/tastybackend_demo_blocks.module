@@ -41,7 +41,7 @@ function tastybackend_demo_blocks_block_view($delta = '') {
   }
   if ($delta == 'tastybackend_demo_blocks_profile') {
     $block['subject'] = t('Get the Profile');
-    $block['content'] = '<p>The Tasty Backend Standard installation profile is currently in development, but you can <a href="https://github.com/jenitehan/tastybackend_standard">grab it on GitHub</a>.</p>';
+    $block['content'] = '<p>The Tasty Backend Standard installation profile is currently in development, but you can <a href="https://github.com/jenitehan/tasty_backend">grab it on GitHub</a>.</p>';
   }
   if ($delta == 'tastybackend_demo_blocks_dc') {
     $block['content'] = 'Made by <a href="http://www.deliciouscreative.com">Delicious Creative</a>';
